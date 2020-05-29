@@ -1,35 +1,30 @@
 <template>
-	<view>
-		<live-pull ref="livePlayer" style="width: 100%;height: 100%;position: absolute;"></live-pull>
-	</view>
+	<layout-page>
+		<view slot="header">
+			<ui-header :title="title"></ui-header>
+		</view>
+		<!-- 内容 -->
+		<view slot="content">
+			<ui-mescroll-uni ref="mescroll" :up="{ use: false }" :down="{ use: false }" :top="true" :bottom="false">
+				新的页面
+			 </ui-mescroll-uni>
+		</view>
+	</layout-page>
 </template>
 
 <script>
-	// import flvjs from 'flv.js'
-	import livePull from '@/components/livepull/livepull.vue'
+	import {
+		Nav,
+		Message
+	} from '../../service'
+	import vuex from 'vuex'
+	import uiHeader from '../../components/ui/header.vue'
+	import uiMescrollUni from '@/components/ui/mescrollUni.vue'
 	export default {
-		onReady(){
-			let livePlayer = this.$refs.livePlayer.init({
-				src: 'http://pull.ajiu999.cn/live/18664903380.flv',
-				objectFit: 'fill',
-				h5: {
-					type: 'flv'
-				}
-			});
-			
-			
-			
-			livePlayer.$on('CanPlay', () => {
-				// livePlayer.play();
-			});
-			
-			
-			
-			livePlayer.load();
-			
-		},
-		components: {
-			livePull
-		}
+
 	}
 </script>
+
+<style>
+
+</style>

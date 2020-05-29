@@ -1,6 +1,6 @@
 {
-    "name" : "u",
-    "appid" : "__UNI__23507D4",
+    "name" : "lives.uniapp.20200425",
+    "appid" : "__UNI__EA84328",
     "description" : "",
     "versionName" : "1.0.0",
     "versionCode" : "100",
@@ -57,7 +57,7 @@
     "quickapp" : {},
     /* 小程序特有相关 */
     "mp-weixin" : {
-        "appid" : "",
+        "appid" : "wx3126fb1a4b157bcf",
         "setting" : {
             "urlCheck" : false
         },
